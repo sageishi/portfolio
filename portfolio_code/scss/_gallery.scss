@@ -1,0 +1,74 @@
+#gallery {
+
+  .main-section {
+
+    p {
+      width: 80%;
+      margin: 60px auto;
+      padding-bottom: 60px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .gallery-btn {
+      width: 960px;
+      margin: 0 auto 100px;
+      display: flex;
+      justify-content: center;
+
+      li {
+        width: 240px;
+        padding: 10px 0;
+        text-align: center;
+        margin: 0 10px;
+        background-color: #63676b;
+        color: #d2d5ec;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #4b7a7c;
+        }
+
+        &.mixitup-control-active {
+          background-color: #4b7a7c;
+        }
+      }
+    }
+
+    .photopile {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        margin: 2px;
+        padding: 0;
+
+        a {
+          
+          display: block;
+          padding: 2px;
+          outline: none;
+          text-decoration: none;
+          border: 1px solid #63676b;
+          box-shadow: 0 0 20px #63676b;
+
+          img {
+            max-height: 200px;
+            max-width: 200px;
+            display: block;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #63676b;
+          }
+        }
+      }   
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@import '_reset.scss';
+
+/* layout */
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 60vh;
+  background: url(../img/bg-main_visual@2x.jpg)no-repeat center top/cover;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+}
+
+main {
+  width: 100%;
+
+  .first-content {
+    height: 50vh;
+    text-align: center;
+    background-color: #fffff3;
+
+    h2 {
+      padding: 100px 0 40px 0;
+      font-size: 2.0em;
+    }
+
+    p {
+      line-height: 2.0;
+    }
+  }
+
+  .second-content {
+    padding-bottom: 100px;
+    background: url(../img/bg-content@2x.jpg)no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+
+    h2 {
+      padding: 80px 0 60px 0;
+      font-size: 2.0em;
+      color: #fff;
+    }
+
+    .sc-inner {
+      width: 960px;
+      margin: 0 auto;
+      border: 50px solid rgba(0, 0, 0, 0.3);
+      box-sizing: border-box;
+
+      .sc-box-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      
+        .sc-photo {
+          width: 50%;
+        }
+
+        .sc-box {
+          width: 50%;
+          text-align: left;
+          background-color: #fffff3;
+
+          h3 {
+            margin: 40px 20px 30px;
+          }
+
+          p {
+            margin: 0 20px 0;
+            line-height: 1.8;
+            font-size: 1.0em;
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  .third-content {
+    text-align: center;
+    background-color: #fffff3;
+
+    h2 {
+      padding: 80px 0 50px;
+      font-size: 2.0em;
+    }
+
+    p {
+      line-height: 2.0;
+    }
+
+    .tc-inner {
+      width: 800px;
+      margin: 60px auto 0;
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+
+  p {
+    line-height: 78px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+
+      a {
+        margin: 0 12px;
+        display: block;
+        line-height: 78px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,359 @@
+#clientwork {
+
+  .main-section {
+    position: relative;
+
+    .clientwork-summary {
+      margin: 0 auto;
+      height: 280px;
+      width: calc(600px * 1.5);
+      clip-path: polygon(80px 0%, calc(100% - 80px) 0%, 100% 50%, calc(100% - 80px) 100%, 80px 100%, 0% 50%);
+      background: #d2d5ec;
+
+      &:before {
+        clip-path: polygon(80px 0%, calc(100% - 80px) 0%, 100% 50%, calc(100% - 80px) 100%, 80px 100%, 0% 50%);
+        background: #d2d5ec;
+      }
+
+      h3 {
+        width: 100%;
+        margin-bottom: 20px;
+        color: #4b7a7c;
+      }
+
+      p {
+        line-height: 1.5;
+        color: #63676b;
+      }
+    }
+
+    .clientwork-process {
+      text-align: center;
+
+      .clientwork-process-title {
+        height: 60px;
+        width: 380px;
+        margin: 80px auto 40px;
+        clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        
+
+        &:before {
+          top: 2px;  /* border width */
+          left: 2px;  /* border width */
+          height: calc(100% - 4px);  /* 100% - (2 * border width) */
+          width: calc(100% - 4px);  /* 100% - (2 * border width) */
+          clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+          background: #d2d5ec;
+        }
+
+        .hexagon-text {
+          color: #4b7a7c;
+        }
+      }
+
+      .clientwork-process-chart {
+        padding-bottom: 80px;
+
+        li {
+          margin-bottom: 16px;
+          text-align: left;
+
+          .clientwork-process-chart-title {
+            width: 960px;
+            height: 160px;
+            padding: 20px;
+            box-sizing: border-box;
+            border-left: 16px solid #4b7a7c;
+            background: #d2d5ec;
+            cursor: pointer;
+
+            &.clientwork-banner {
+              height: 100px;
+            }
+
+            &:hover {
+              background: hsl(210, 4%, 60%);
+              color: #d2d5ec;
+            }
+          
+            h4 {
+              font-size: 1.8rem;
+              font-weight: 400;
+
+              span {
+                margin-right: 12px;
+                font-size: 2.8rem;
+                font-weight: 800;
+                color: #4b7a7c;
+              }
+            }
+
+            p {
+              text-indent: 72px;
+              line-height: 1.8;
+            }
+
+            .clientwork-time {
+              color: #4b7a7c;
+            }
+
+            .clientwork-arrow {
+              text-align: right;
+              line-height: 1.6rem;
+
+              &::after {
+                margin-left: 10px;
+                font-family: 'FontAwesome';
+                content: '\f18e';
+                position: relative;
+                top: 4px;
+                font-size: 1.8rem;
+                font-weight: 100;
+              }
+
+              &.clientwork-click::after {
+                content: '\f01a';
+              }
+            }
+          }
+
+          .clientwork-process-chart-desc {
+            width: 944px;
+            // height: 800px;
+            margin-left: 16px;
+            background: rgba(210, 213, 236, 0.7);
+            display: none;
+
+            .clientwork-pdf-list {
+
+              li {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 1.2rem;
+
+                &:first-of-type {
+                  padding-top: 60px;
+                }
+
+                &:last-of-type {
+                  padding-bottom: 60px;
+                }
+
+                a {
+
+                  &:hover {
+                    color: #4b7a7c;
+                  }
+
+                  &::before {
+                    margin-right: 10px;
+                    font-family: 'FontAwesome';
+                    content: '\f1c1';
+                  }
+                }
+              }
+            }
+
+            .clientwork-coding-set {
+              padding: 60px 0 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .hexagon-link {
+                margin-left: 40px;
+              }
+            }
+
+            #clientwork-coding-tab {
+              width: 80%;
+              margin: 0 auto;
+              display: flex;
+
+              li {
+                margin-bottom: 0;
+                width: calc(100% / 3);
+                background: rgba(99, 103, 107, 0.5);
+                clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+                position: relative;
+                text-align: center;
+                
+                &:after {
+                  width: 100%;
+                  height: 100%;
+                  content: "";
+                  background:rgba(210, 213, 236, 0.7);
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: -1;
+                }
+
+                &.coding-current {
+                  background: #d2d5ec;
+                  color: #4b7a7c;
+                }
+
+                a {
+                  display: block;
+                  line-height: 36px;
+
+                  &:hover {
+                    background: #d2d5ec;
+                  }
+                }
+              }
+            }
+
+            .clientwork-coding-tab-desc {
+              padding-bottom: 60px;
+
+              .clientwork-coding-panel {
+                width: 80%;
+                height: 180px;
+                margin: 0 auto;
+                background: #d2d5ec;
+                align-items: center;
+                display: none;
+              
+                &.coding-current {
+                  display: flex;
+                }
+
+                ol {
+                  width: 100%;
+
+                  li {
+                    width: 80%;
+                    margin: 0 auto;
+                    list-style-type: decimal;
+                    text-align: left;
+                    line-height: 1.4;
+
+                    ol {
+                      li {
+                        list-style-type: lower-alpha;
+                      }
+                    }
+                  }
+                }
+              }
+
+              p {
+                padding: 20px 40px;
+                line-height: 1.4;
+              }
+            }
+
+            .clientwork-process-text {
+              padding: 60px 40px;
+              line-height: 1.6;
+            }
+
+            .clientwork-optimisation {
+              padding: 60px 40px;
+
+              .clientwork-optimisation-item {
+                margin: 40px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:nth-of-type(2) {
+                  flex-direction: row-reverse;  
+                }
+
+                a {
+                  width: 38%;
+
+                  &:hover {
+                    box-shadow: 0 0 20px #4b7a7c;
+                  }
+                }
+
+                p {
+                  width: 58%;
+                  padding: 0;
+                }
+              }
+            }
+
+            &.search-results {
+              padding: 60px 40px;
+              box-sizing: border-box;
+              position: relative;
+
+              a {
+                width: 50%;
+                display: block;
+
+                &>img {
+                  width: 100%;
+                }
+
+                &:nth-of-type(1) {
+                  box-shadow: 0 0 3px #63676b;
+                }
+
+                &:nth-of-type(2) {
+                  position: absolute;
+                  top: 40px;
+                  right: 80px;
+                  box-shadow: 0 0 3px #63676b;
+                }
+
+                &:nth-of-type(3) {
+                  position: absolute;
+                  top: 360px;
+                  right: 40px;
+                  box-shadow: 0 0 3px #63676b;
+                }
+
+                &:nth-of-type(4) {
+                  position: absolute;
+                  top: 660px;
+                  right: 60px;
+                  box-shadow: 0 0 3px #63676b;
+                }
+
+                &:hover {
+                  box-shadow: 0 0 20px #4b7a7c;
+                }
+              }
+
+              p {
+                padding: 100px 20px 0;
+              }
+            }
+
+            .clientwork-banner-wrapper {
+              padding: 60px 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .clientwork-banner-images {
+                width: 38%;
+                display: flex;
+                flex-direction: column;
+
+                a:first-of-type {
+                  margin-bottom: 20px;
+                }
+              }
+
+              p {
+                width: 58%;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+}

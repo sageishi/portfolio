@@ -1,0 +1,103 @@
+header {
+  height: calc(100vh - 60px);
+  background: url(../img/bg.jpg)no-repeat center center/cover;
+  position: relative;
+
+  h1 {
+    padding: 10vh 80px 16vh 80px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 3.0rem;
+    position: absolute;
+    left: 20vw;
+    bottom: 0;
+    background-color: #4b7a7c;
+    color: #d2d5ec;
+  }
+
+  .top-name {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    text-indent: 60px;
+    direction: rtl;
+    text-align: right;
+    text-indent: 60px;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    color: #d2d5ec;
+
+    span {
+      display: block;
+      margin-top: 10px;
+      width: 77vw;
+      height: 2px;
+      background-color: #d2d5ec;
+      
+    }
+  }
+
+  &.nav-at-top {
+    h1 {
+      padding: 0;
+      position: fixed;
+      left: calc((100vw / 2) - 480px);
+      top: 8px;
+      bottom: initial;
+      line-height: 1.0;
+      writing-mode: initial;
+      text-orientation: mixed;
+      font-size: 1.8rem;
+      letter-spacing: 1.4px;
+      z-index: 10;
+    }
+
+    p {
+      position: fixed;
+      left: calc((100vw / 2) - 480px);
+      top: 26px;
+      bottom: inherit;
+      right: inherit;
+      font-size: 0.8rem;
+      line-height: 40px;
+      letter-spacing: 1.4px;
+      z-index: 10;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+
+nav {
+  background-color: #4b7a7c;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+
+  ul {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+
+  & .current a {
+    background:linear-gradient(#4b7a7c 0%, #4b7a7c 85%, #d2d5ec 85%, #d2d5ec 100%);
+  }
+    li {
+
+      a {
+        padding: 0 14px;
+        display: block;
+        line-height: 60px;
+        color: #d2d5ec;
+
+        &:hover {
+          background:linear-gradient(#4b7a7c 0%, #4b7a7c 85%, #d2d5ec 85%, #d2d5ec 100%);
+        }
+      }
+    }
+  }
+}

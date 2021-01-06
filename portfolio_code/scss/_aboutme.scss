@@ -1,0 +1,441 @@
+.aboutme-first {
+  position: relative;
+  margin-bottom: 100px;
+
+  .aboutme-basic {
+    width: 438px;
+    height: 542px;
+    position: relative;
+
+    .profile-photo {
+      position: absolute;
+      top: 108px;
+      left: 30px;
+
+      &:before {
+        background: url(../img/profile.jpg)no-repeat 20% 20%/150%;
+      }
+    }
+
+    .profile-first {
+      position: absolute;
+      top: 0;
+      left: 214px;
+
+      p:first-of-type {
+        margin-bottom: 2px;
+        text-indent: 44px;
+      }
+    }
+
+    .profile-second {
+      position: absolute;
+      top: 214px;
+      left: 214px;
+
+      p {
+        text-align: left;
+        text-indent: 30px;
+
+        &:first-of-type {
+          text-indent: 62px;
+
+          span {
+            margin-left: 100px;
+          }
+        }
+
+        &:nth-of-type(2) {
+
+          span {
+            margin-left: 40px;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      li {
+        margin-left: 28px
+      }
+    }
+
+    .profile-third {
+      position: absolute;
+      top: 322px;
+      left: 30px;
+
+      p {
+        margin-bottom: 8px;
+        text-align: left;
+        text-indent: 66px;
+
+        span {
+          margin-left: 70px;
+        }
+
+        &:nth-of-type(n + 2) {
+          margin-bottom: 2px;
+          text-indent: 50px;
+        }
+      }
+
+      ul {
+
+        &:first-of-type {
+          margin-bottom: 8px;
+          margin-left: 36px;
+        }
+
+        &:nth-of-type(2) {
+          margin-left: 50px;
+        }
+      }
+    }
+
+    h3 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      font-size: 0.8rem;
+
+      small {
+        font-size: 0.4rem;
+      }
+    }
+
+    ul {
+      font-size: 0.8rem;
+      text-align: left;
+
+      li {
+        list-style: disc;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .aboutme-intro {
+    height: 280px;
+    width: calc(330px * 1.5);
+    clip-path: polygon(80px 0%, calc(100% - 80px) 0%, 100% 50%, calc(100% - 80px) 100%, 80px 100%, 0% 50%);
+    position: absolute;
+    top: 77px;
+    right: 30px;
+    background: #d2d5ec;
+
+    &:before {
+      clip-path: polygon(80px 0%, calc(100% - 80px) 0%, 100% 50%, calc(100% - 80px) 100%, 80px 100%, 0% 50%);
+      background: #d2d5ec;
+    }
+
+    h3 {
+      width: 100%;
+      margin-bottom: 20px;
+      color: #4b7a7c;
+    }
+
+    p {
+      line-height: 1.4;
+      color: #63676b;
+    }
+  }
+}
+
+.aboutme-second {
+  text-align: center;
+
+  .aboutme-second-title {
+    height: 60px;
+    width: 380px;
+    margin: 80px auto 40px;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    
+
+    &:before {
+      top: 2px;  /* border width */
+      left: 2px;  /* border width */
+      height: calc(100% - 4px);  /* 100% - (2 * border width) */
+      width: calc(100% - 4px);  /* 100% - (2 * border width) */
+      clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+      background: #d2d5ec;
+    }
+
+    .hexagon-text {
+      color: #4b7a7c;
+    }
+  }
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    color: #63676b;
+    background: #d2d5ec;
+  }
+
+  #vision-tab {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+
+    li {
+      width: calc(100% / 3);
+      background: rgba(99, 103, 107, 0.5);
+      clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+      position: relative;
+      
+      &:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background:rgba(210, 213, 236, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      &.vision-current {
+        background: #d2d5ec;
+        color: #4b7a7c;
+      }
+
+      a {
+        display: block;
+        line-height: 36px;
+
+        &:hover {
+          background: #d2d5ec;
+        }
+      }
+    }
+  }
+
+  .aboutme-vision {
+
+    .aboutme-vision-panel {
+      width: 80%;
+      height: 180px;
+      margin: 0 auto;
+      background: #d2d5ec;
+      align-items: center;
+      display: none;
+    
+      &.vision-current {
+        display: flex;
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          width: 80%;
+          margin: 0 auto;
+          list-style-type: disc;
+          text-align: left;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.aboutme-third {
+  text-align: center;
+
+  .aboutme-third-title {
+    height: 60px;
+    width: 380px;
+    margin: 80px auto 40px;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    
+
+    &:before {
+      top: 2px;  /* border width */
+      left: 2px;  /* border width */
+      height: calc(100% - 4px);  /* 100% - (2 * border width) */
+      width: calc(100% - 4px);  /* 100% - (2 * border width) */
+      clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+      background: #d2d5ec;
+    }
+
+    .hexagon-text {
+      color: #4b7a7c;
+    }
+  }
+
+  .aboutme-timeline {
+    width: 80%;
+    margin: 0 auto;
+    background: #d2d5ec;
+  }
+
+  .aboutme-skillset {
+    width: 920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h4 {
+      text-align: left;
+      text-indent: 1.0rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      width: 540px;
+      height: 198px;
+      position: relative;
+      margin: 30px auto 80px;
+
+      .skillset-image {
+        height: 100px;
+        width: calc(100px * 1.1547005);
+
+        &:before {
+          top: 2px;  /* border width */
+          left: 2px;  /* border width */
+          height: calc(100% - 4px);  /* 100% - (2 * border width) */
+          width: calc(100% - 4px);  /* 100% - (2 * border width) */
+          background: #d2d5ec;
+        }
+        
+        &>img {
+          width: 50%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+        }
+
+        &:nth-of-type(1) {
+          position: absolute;
+          top: 49px;
+          left: 0;
+        }
+
+        &:nth-of-type(2) {
+          position: absolute;
+          top: 0;
+          left: 85px;
+        }
+
+        &:nth-of-type(3) {
+          position: absolute;
+          top: 98px;
+          left: 85px;
+        }
+
+        &:nth-of-type(4) {
+          position: absolute;
+          top: 49px;
+          left: 170px;
+        }
+
+        &:nth-of-type(5) {
+          position: absolute;
+          top: 0;
+          left: 255px;
+        }
+
+        &:nth-of-type(6) {
+          position: absolute;
+          top: 98px;
+          left: 255px;
+        }
+
+        &:nth-of-type(7) {
+          position: absolute;
+          top: 49px;
+          left: 340px;
+        }
+
+        &:nth-of-type(8) {
+          position: absolute;
+          top: 0;
+          left: 425px;
+        }
+      }
+    }
+    
+    .skillset-previous, .skillset-software {
+      width: 455px;
+    }
+
+    .skillset-learn {
+      width: 370px;
+
+      .skillset-image {
+        &:nth-of-type(2) img {
+          width: 70%;
+        }
+
+        &:nth-of-type(3) img, &:nth-of-type(4) img {
+          width: 60%;
+        }
+
+        &:nth-of-type(5) img {
+          width: 70%;
+        }
+      }
+    }
+
+    .skillset-previous {
+      .skillset-image {
+        &:nth-of-type(-n + 6) img {
+          width: 65%;
+        }
+
+        &:last-of-type img {
+          width: 70%;
+        }
+      }
+    }
+    
+    .skillset-software {
+      .skillset-image {
+        &:nth-of-type(3) img, &:nth-of-type(4) img {
+          width: 45%;
+        }
+
+        &:nth-of-type(5) img {
+          width: 60%;
+        }
+      }
+    }
+
+    .skillset-school {
+      .skillset-image {
+        &:nth-of-type(5) img {
+          width: 65%;
+        }
+
+        &:nth-of-type(6) img, &:nth-of-type(7) img {
+          width: 75%;
+        }
+
+        &:last-of-type img {
+          width: 65%;
+        }
+      }
+    }
+  }
+}

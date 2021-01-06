@@ -1,0 +1,332 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/kokoro.css);
+
+/* reset */
+
+html, body, h1, h2, h3, p, ul, li, figure, figcaption, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* layout */
+
+.container {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.inner {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+}
+
+/* header */
+
+.page-header {
+  margin: 20px 0 10px;
+  text-align: center;
+  border-bottom: 3px solid #f00;
+}
+
+.header-inner h1 {
+  margin-bottom: 20px;
+}
+
+.g-nav ul {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+}
+
+  .g-nav li {
+    width: 25%;
+  }
+
+  .g-nav a {
+    display: block;
+    line-height: 40px;
+  }
+
+  .g-nav a:hover {
+    color: #f00;
+  }
+
+@media screen and (min-width: 768px) {
+
+  .page-header {
+    margin: 20px 0;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    .header-inner h1 {
+      margin-bottom: 10px;
+    }
+
+  .g-nav {
+    width: 40%;
+    align-self: flex-end;
+  }
+
+  .g-nav ul {
+    margin-bottom: 0;
+  }
+
+}
+
+/* main */
+
+/* key */
+
+.key-visual {
+  margin-bottom: 20px;
+}
+
+.catch-copy {
+  margin-bottom: 60px;
+}
+
+  .catch-copy p {
+    margin: 0 12px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 0.9em;
+  }
+
+@media screen and (min-width: 768px) {
+
+  .catch-copy p {
+    font-size: 1.0em;
+  }
+
+}
+
+/* recommend */
+
+.recommend {
+  margin: 0 20px 60px;
+}
+
+  .recommend h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Kokoro', serif;
+    color: #f00;
+  }
+
+.recommend-box {
+  margin-bottom: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #ccc;
+}
+
+  .recommend-photo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .recommend-box figcaption {
+    text-align: center;
+    line-height: 1.8;
+  }
+
+@media screen and (min-width: 768px) {
+
+  .recommend {
+    margin: 0 0 60px;
+  }
+
+    .recommend h2 {
+      font-size: 1.8em;
+    }
+
+  .recommend-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .recommend-box {
+    width: 32%;
+  }
+
+}
+
+@media screen and (max-width: 959px) {
+
+  .recommend {
+    margin: 0 10px;
+  }
+
+}
+
+/* news */
+
+.news {
+  margin: 0 20px 60px;
+}
+
+  .news h3 {
+    margin-bottom: 15px;
+    font-family: 'Suez One', serif;
+  }
+
+  .fa-square {
+    margin-right: 6px;
+    color: #f00;
+  }
+
+  .news-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    .news-item dt {
+      width: 120px;
+      line-height: 1.6;
+    }
+
+    .news-item dd {
+      width: 70%;
+      line-height: 1.6;
+    }
+
+@media screen and (min-width: 768px) {
+
+  .news-item dd {
+      width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 439px) {
+
+  .news-item {
+    display: block;
+  }
+
+    .news-item dd {
+      width: 100%;
+      text-indent: 1.2em;
+    }
+
+}
+
+/* footer */
+
+.page-footer {
+  background: #1c8a1c;
+  color: #fff;
+}
+
+.footer-nav {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+  .footer-nav li {
+    width: 100%;
+  }
+
+  .footer-nav a {
+    display: block;
+    line-height: 3.4;
+    border-bottom: 1px solid #fff;
+  }
+
+  .footer-nav a:hover {
+    color: #f00;
+  }
+
+.contact {
+  margin: 0 30px 20px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+  .contact li {
+    line-height: 1.6;
+  }
+
+.address {
+  margin: 0 30px 40px;
+}
+
+  .address li {
+    line-height: 1.4;
+    font-size: 0.8em;
+  }
+
+.copyright {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+    .footer-nav a {
+      border: 0;
+    }
+
+  .contact {
+    width: 50%;
+    margin: 0;
+    padding: 20px 60px 0;
+    box-sizing: border-box;
+  }
+
+  .address {
+    width: 50%;
+    margin: 0;
+    padding: 20px 50px 0;
+    box-sizing: border-box;
+  }
+
+    .address li {
+      font-size: 1.0em;
+    }
+
+  .copyright {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+}

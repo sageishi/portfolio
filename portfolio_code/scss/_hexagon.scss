@@ -1,0 +1,134 @@
+.hexagon {
+  position: relative;
+  height: 220px;
+  width: calc(220px * 1.1547005);
+  background: #4b7a7c;
+  box-sizing: border-box;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 6px;  /* border width */
+    left: 6px;  /* border width */
+    height: calc(100% - 12px);  /* 100% - (2 * border width) */
+    width: calc(100% - 12px);  /* 100% - (2 * border width) */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: #63676b;
+  }
+
+  .hexagon-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-content: center;
+    color: #d2d5ec;
+  }
+}
+
+.hexagon-link-button-set {
+  width: calc(((120px * 1.1547005) * 2) + 20px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.hexagon-link-button {
+  width: calc(120px * 1.1547005);
+
+  a {
+
+    .hexagon-link {
+      height: 120px;
+      width: calc(120px * 1.1547005);
+
+      &:before {
+        top: 4px;  /* border width */
+        left: 4px;  /* border width */
+        height: calc(100% - 8px);  /* 100% - (2 * border width) */
+        width: calc(100% - 8px);  /* 100% - (2 * border width) */
+      }
+
+      .hexagon-text {
+        
+        h3 {
+          font-size: 0.8rem;
+        }
+
+        .link-icon>img {
+          width: 50%;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &:hover .hexagon-link:before {
+      background: #4b7a7c;
+    }
+  }
+}
+
+.top-link-button-set {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  .top-link-pdf-button {
+    
+    a {
+      position: relative;
+
+      .hexagon-link {
+
+        .hexagon-text {
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            line-height: 1.2;
+          }
+
+          .pdf-icon {
+            margin-top: 10px;
+
+            &>.fa-file-pdf-o {
+              font-size: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .top-link-code-button {
+    
+    a {
+
+      .hexagon-link {
+
+        .hexagon-text {
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            line-height: 1.2;
+          }
+
+          .link-icon {
+
+            &>img {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

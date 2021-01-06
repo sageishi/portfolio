@@ -1,0 +1,109 @@
+<div class="main-section">
+  <h2 class="lang-eng">Website 100</h2>
+  <div class="hexagon-link-button-set">
+    <div class="hexagon-link-button website100-link-button">
+      <a href="https://website100.m3productions.jp" target="_blank">
+        <div class="hexagon-link hexagon">
+          <div class="hexagon-text">
+            <h3>サイトLink</h3>
+          </div><!-- /.hexagon-text -->
+        </div><!-- /.hexagon-link -->
+      </a>
+    </div><!-- /.hexagon-link-button -->
+    <div class="hexagon-link-button website100-link-button">
+      <a href="https://github.com/sageishi/portfolio/tree/main/website100" target="_blank">
+        <div class="hexagon-link hexagon">
+          <div class="hexagon-text">
+            <h3>Code Link</h3>
+            <p class="link-icon"><img src="../img/icons/github.png" alt="GitHub Logo"></p>
+          </div><!-- /.hexagon-text -->
+        </div><!-- /.hexagon-link -->
+      </a>
+    </div><!-- /.hexagon-link-button -->
+  </div><!-- /.hexagon-link-button-set -->
+  <div class="website-wrapper">
+    <div class="website-frame">
+      <p><img src="../img/ws100_sp.png" alt="Website 100 SP Image"></p>
+      <p><img src="../img/ws100_pc.png" alt="Website 100 PC Image"></p>
+    </div><!-- /.website-frame -->
+    <div class="website-text">
+      <h3 class="lang-eng">Concept</h3>
+      <p>Webサイト100選<br>100サイトを目標に色んな<br>サイトを見て、学ぶ事</p>
+      <p>プロジェクトのテーマ:<br>「コーダーからの視点で色々な<br>ウェブサイトを閲覧して気がついた点<br>などを記したブログ」</p>
+      <p>デザイン:<br>可能な限りシンプルに、<br>情報量が多くなる為、<br>読む人に一目瞭然になるよう</p>
+    </div><!-- .website-text -->
+  </div><!-- /.website-wrapper -->
+  <div class="website100-summary hexagon">
+    <div class="hexagon-text">
+      <h3>完了後の感想介</h3>
+      <p>Wordpressは使いやすく、誰でもブログを始められるイメージを持っていました。<br>しかし、授業でWordpressを学んでいくと、既に出来ているテンプレート(テーマ)を使用するだけで、<br>ひたすらブログを書くのが目的であれば、使いやすいと言われている事を理解しました。<br>ただし、テーマを個性あるカスタム化するには基本のhtml・cssだけではなく、 phpやデータベース、<br>あとはWordpressの独自の記述を理解していないと文章構造等が正しく表示されない事が<br>良く理解できました。今後、Wordpress等のCMSが必需になっていくので、<br>基本をしっかり身につけて様々なCMS等に対応できるように努力して行きたいと思いました。</p>
+    </div><!-- /.hexagon-text -->
+  </div><!-- /.website100-summary -->
+  <div class="website100-main-point">
+    <div class="website100-main-point-images">
+      <a class="website100-fancybox-image" href="../img/ws100_pc.png"><img src="../img/ws100_pc.png" alt="Website100 PC Image"></a>
+      <a class="website100-fancybox-image" href="../img/ws100_sp.png"><img src="../img/ws100_sp.png" alt="Website100 SP Image"></a>
+    </div><!-- /.website100-main-point-images -->
+    <div class="website100-arrow-set">
+      <p class="website100-arrow"><img src="../img/website100_arrow.png" alt="Arrow Image"></p>
+      <p class="website100-arrow-desc">一つのphpファイルで投稿リスト・投稿のシングルページ・<br>各自のモバイルへのレスポンシブデザイン</p>
+    </div><!-- /.website100-arrow-set -->
+    <ul id="website100-summary-tab">
+      <li class="summary-current"><a href="#website100-summary-problem">問題点</a></li>
+      <li><a href="#website100-summary-fix">解決策</a></li>
+      <li><a href="#website100-summary-summary">振り返り</a></li>
+    </ul>
+    <div class="website100-summary-tab-desc">
+      <div id="website100-summary-problem" class="website100-summary-panel summary-current">
+        <ol>
+          <li>the_excerpt()を使用したが、シングルページで投稿を表示した場合、改行やpタグが別々だったのが一つにまとまってしまい、表示が崩れてしまった</li>
+          <li>カテゴリー名を文字だけでは無く、アイコンを表示したかった。ただし、投稿一覧のページとシングルページではWordpressの記述が違った</li>
+          <li>dynamic_sidebar()をnav替りに使用したが、表示出来ない項目があった</li>
+        </ol>
+      </div><!-- #website100-summary-problem -->
+      <div id="website100-summary-fix" class="website100-summary-panel">
+        <ol>
+          <li>the_excerpt()ではなくthe_content()を使用して、投稿記事にはhtmlで内容を記載する事により、レイアウトをコントロールする事ができた</li>
+          <li>Googleで検索してする事によって、シングルページではget_queried_object()、投稿ページはget_the_category()を使用するのが分かった</li>
+          <li>custom htmlが見つかり、直接htmlを記入。表示はcssで修正を行った</li>
+        </ol>
+      </div><!-- /#website100-summary-fix -->
+      <div id="website100-summary-summary" class="website100-summary-panel">
+        <p>Wordpressはプラグインが豊富にあるが、プラットフォームが常時アップデートされている為、プラグインが非対応になる可能性が高いと分かりました。テーマも更新されば、カスタムした部分がその都度消えてしまう。可能な限り自分でテーマを作り、プラグインに便りにし過ぎずに自分でfunctionなどを作る方が長期的に良いと実感しました。Wordpressにはまだまだ使用していない機能が沢山あるので、一個一個使えこなして行きたと思います。</p>
+      </div><!-- /#website100-summary-summary -->
+    </div><!-- /.website100-summary-tab-desc -->
+  </div><!-- /.website100-main-point -->
+  <div class="website100-title hexagon">
+    <h3 class="hexagon-text">上記２番の問題点の詳細</h3>
+  </div><!-- .website100-title -->
+  <div class="website100-coding-problem">
+    <div class="website100-coding-problem-summary">
+      <p>カテゴリーを文字ではなく、<br>アイコンで表現して見たいと<br>思いました。ただし、<br>前ページの問題点の2番の通り、<br>各ページでの記述<br>(カテゴリーのID引っ張り方)の<br>仕方が異なっていた為<br>悪戦した。</p>
+    </div><!-- /.website100-coding-problem-summary -->
+    <div class="website100-coding-problem-resolve">
+      <div class="website100-coding-problem-first">
+        <p><img src="../img/website100_code01.png" alt="Website100 Coding Problem 01"></p>
+        <p class="website100-coding-problem-text">is_category()の中でフィルターされているカテゴリーを引用するにはget_queried_object()が必要と分かりました。Googleで検索して、Objectのアローファンクションで呼び出すデータ名がterm_idと分かりました。後はテーマのディレクトリーの呼び出しのファンクションを利用して、画像のsrcに記述する。</p>
+      </div><!-- /.website100-coding-problem-first -->
+      <div class="website100-coding-problem-second">
+        <p><img src="../img/website100_code02.png" alt="Website100 Coding Problem 02"></p>
+        <p class="website100-coding-problem-text">最初はtaxonomy等のプラグインを使用してアイコンの表示を試みたけど、アイコンの表示はバックエンドの管理者ページでしか表示が出来なかった。Googleで検索してみたら、カテゴリーのIDを利用してphpで表示できる方法を学びました。上記のis_category()と比べて、get_the_category()の記述の方が分かりやすかったが。一つの投稿記事に複数の表示が必要な為、foreach()を使用して複数の表示ができた。</p>
+      </div><!-- /.website100-coding-problem-second -->
+    </div><!-- /.website100-coding-problem-resolve -->
+  </div><!-- /.website100-coding-problem -->
+  <div class="website100-title hexagon">
+    <h3 class="hexagon-text">こだわりのポイント</h3>
+  </div><!-- .website100-title -->
+  <div class="website100-point">
+    <div class="website100-point-first">
+      <a class="website100-fancybox-image" href="../img/website100_point01.png"><img src="../img/website100_point01.png" alt="Website100 PC Image"></a>
+      <p>通常のモックアップですと、100vhのみしか<br>表示出来ない為。サイトの全体をもう少し<br>表示できるのと画像の高さを抑えながら<br>表示する為3Dを利用しました。</p>
+      <p>幅のばらつきやすい文字ではなく、<br>一目で分かりやすいアイコンで表示するようにしました。</p>
+    </div><!-- /.website100-point-first -->
+    <div class="website100-point-second">
+      <a class="website100-fancybox-image" href="../img/website100_point02.png"><img src="../img/website100_point02.png" alt="Website100 PC Image"></a>
+      <p>Wordpressにはexcerpt()の機能がありますが、<br>シングルページでは改行が上手く表示されなかった。<br>CSSでコントロールしやすくする為、<br>投稿の記入時はhtmlで記入する事にしました。<br>これにより、各行の微調整も可能となりました。</p>
+    </div><!-- /.website100-point-second -->
+  </div><!-- /.website100-point -->
+  <script src="../js/website100.js"></script>
+</div><!-- /.main-section -->

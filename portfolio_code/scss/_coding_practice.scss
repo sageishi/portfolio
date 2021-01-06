@@ -1,0 +1,225 @@
+#coding {
+
+  .main-section {
+    position: relative;
+
+    .coding-practice-title {
+      height: 60px;
+      width: 380px;
+      margin: 80px auto 40px;
+      clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+      
+
+      &:before {
+        top: 2px;  /* border width */
+        left: 2px;  /* border width */
+        height: calc(100% - 4px);  /* 100% - (2 * border width) */
+        width: calc(100% - 4px);  /* 100% - (2 * border width) */
+        clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        background: #d2d5ec;
+      }
+
+      .hexagon-text {
+        color: #4b7a7c;
+      }
+    }
+
+    #coding-basic-tab {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+
+      li {
+        margin-bottom: 0;
+        width: calc(100% / 4);
+        background: rgba(99, 103, 107, 0.5);
+        clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        text-align: center;
+        
+        &:after {
+          width: 100%;
+          height: 100%;
+          content: "";
+          background:rgba(210, 213, 236, 0.7);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &.coding-current {
+          background: #d2d5ec;
+          color: #4b7a7c;
+        }
+
+        a {
+          display: block;
+          line-height: 36px;
+
+          &:hover {
+            background: #d2d5ec;
+          }
+        }
+      }
+    }
+
+    .coding-basic-tab-desc {
+      padding-bottom: 80px;
+
+      .coding-basic-panel {
+        width: 100%;
+        height: 660px;
+        background: #d2d5ec;
+        display: none;
+      
+        &.coding-current {
+          display: block;
+        }
+
+        .website-wrapper {
+          width: 920px;
+          height: 480px;
+          margin: 0 0 0 40px;
+          padding: 40px 0;
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: left;
+
+          .coding-basic-link-button-set {
+            width: 320px;
+            height: 280px;
+            position: static;
+            flex-direction: column;
+            
+            .coding-basic-link-button {
+              align-self: center;
+            }
+          }
+        }
+
+        .coding-basic-panel-text {
+          width: 80%;
+          height: 180px;
+          margin: 0 auto;
+          text-align: center;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    #coding-javascript-tab {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+
+      li {
+        margin-bottom: 0;
+        width: calc(100% / 4);
+        background: rgba(99, 103, 107, 0.5);
+        clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        text-align: center;
+        
+        &:after {
+          width: 100%;
+          height: 100%;
+          content: "";
+          background:rgba(210, 213, 236, 0.7);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &.coding-current {
+          background: #d2d5ec;
+          color: #4b7a7c;
+        }
+
+        a {
+          display: block;
+          line-height: 36px;
+
+          &:hover {
+            background: #d2d5ec;
+          }
+        }
+      }
+    }
+
+    .coding-javascript-tab-desc {
+      padding-bottom: 100px;
+
+      .coding-javascript-panel {
+        width: 100%;
+        height: 660px;
+        background: #d2d5ec;
+        display: none;
+      
+        &.coding-current {
+          display: block;
+        }
+
+        .coding-javascript-codepen {
+
+          .cp_embed_wrapper {
+            width: 880px;
+            height: 350px;
+            margin: 0 auto;
+            padding: 40px 0;
+
+            iframe {
+              height: 100%;
+            }
+          }
+        }
+
+        .coding-javascript-text-link {
+          height: 230px;
+          margin: 0 40px;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            width: 60%;
+            line-height: 1.6;
+          }
+
+          .coding-javascript-link-button {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+
+            a {
+
+              .hexagon-link {
+
+                .hexagon-text {
+                  
+                  .link-icon>img {
+                    width: 80%;
+                  }
+                }
+              }
+            }
+          }
+
+          .coding-javascrip-link-button-set {
+            width: 40%;
+            position: static;
+            justify-content: center;
+            
+            .coding-javascript-link-button {
+              padding: 0 10px;
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
